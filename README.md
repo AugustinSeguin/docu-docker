@@ -24,3 +24,14 @@ Récupérer l'id du container
 docker exec -it CONTAINER_ID /bin/sh
 ```
 
+## Run project with docker compose
+
+```bash
+docker-compose up --build -d
+```
+
+### Down les services
+
+```bash
+docker-compose down -v
+```
