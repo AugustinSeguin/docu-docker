@@ -35,3 +35,17 @@ logs/
 *.bak
 *.tmp
 *.temp
+
+.gitignore
+.git
+.vscode
+*.log
+
+# Docker
+.dockerignore
+compose.yml
+Dockerfile
+
+# Docs
+README.md
+consignes.md

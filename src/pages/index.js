@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link"; 
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
         <div className="container">
           <h2>Getting Started</h2>
           <button>
-            <a href="/docs/intro">Get Started</a>
+            <Link to="/docs/intro">Get Started</Link> 
           </button>
         </div>
       </main>

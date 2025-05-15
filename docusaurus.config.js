@@ -20,9 +20,6 @@ module.exports = {
           showReadingTime: true,
           editUrl: 'https://github.com/your-github-username/docusaurus-project/edit/main/',
         },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
       },
     ],
   ],

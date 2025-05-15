@@ -27,7 +27,7 @@ docker exec -it CONTAINER_ID /bin/sh
 ## Run project with docker compose
 
 ```bash
-docker-compose up --build -d
+docker-compose up -d
 ```
 
 ### Down les services
@@ -35,3 +35,8 @@ docker-compose up --build -d
 ```bash
 docker-compose down -v
 ```
+
+## Accès à l'app
+
+[Application accessible ici](http://localhost:3000/)
+

@@ -1,17 +1,20 @@
-FROM node:24.0-alpine
+FROM node:24.0-alpine AS builder
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+ENV NODE_ENV=production
 
-RUN npm install 
+COPY package.json package-lock.json ./
+RUN npm ci && npm cache clean --force
 
 COPY . .
-
 RUN npm run build
 
-COPY . .
 
-EXPOSE 3000
+FROM nginx:stable-alpine-slim
 
-CMD ["npm", "start", "--", "--host", "0.0.0.0"]
+COPY --from=builder /app/build /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
